@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/login.css"/>
+    <title>Login</title>
+</head>
+<body>
+<div class="container">
+    <form action="/" method="POST" class="formularioLogin">
+        <h1>Login</h1>
+
+        <label for="nome">
+            <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Nome de usuario"
+                    required
+            /></label>
+        <label for="senha">
+            <input
+                    type="password"
+                    name="senha"
+                    id="senha"
+                    placeholder="Insira sua senha"
+                    required
+            /></label>
+        <div class="row">
+            <button type="submit" id="btnLogar">Entrar</button>
+
+        </div>
+        <p class="row"><a href="redefinir">Não lembro usúario e senha.</a></p>
+
+    </form>
+</div>
+</body>
+</html>
