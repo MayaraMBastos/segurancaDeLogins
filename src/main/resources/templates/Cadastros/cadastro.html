@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Usuario</title>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="/cadastro" class="formCadastro">
+        <h1>Cadastro</h1>
+
+        <label for="usuario">
+            <input  type="text"
+                    name="usuario"
+                    id="usuario"
+                    placeholder="Nome de usuario"
+                    required
+            >
+        </label>
+        <label for="senha">
+            <input  type="password"
+                    name="senha"
+                    id="senha"
+                    placeholder="Insira uma senha"
+                    required
+            >
+        </label>
+        <button class="btnCadastrar" type="submit" >Cadastrar</button>
+    </form>
+</div>
+</body>
+</html>
