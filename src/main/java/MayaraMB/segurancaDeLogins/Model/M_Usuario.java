@@ -1,6 +1,7 @@
 package MayaraMB.segurancaDeLogins.Model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "usuario")
@@ -11,9 +12,11 @@ public class M_Usuario {
     private Long id;
 
     @Column(name = "nome")
+    @NotBlank(message = "O nome é obrigatório")
     private String nome;
 
     @Column(name = "senha")
+    @NotBlank(message = "A senha é obrigatória")
     private String senha;
 
     public Long getId() {
