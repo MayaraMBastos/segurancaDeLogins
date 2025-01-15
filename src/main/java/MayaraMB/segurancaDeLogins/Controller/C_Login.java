@@ -1,11 +1,12 @@
 package MayaraMB.segurancaDeLogins.Controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 
 
-@Controller
+@RestController
+@RequestMapping("/login")
 @SessionAttributes("usuario")
 public class C_Login {
 
@@ -13,4 +14,5 @@ public class C_Login {
     public String mapLogin(){
         return "Login/login";
     }
+
 }
