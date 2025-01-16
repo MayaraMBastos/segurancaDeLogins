@@ -3,8 +3,8 @@ $('.formCadastro').submit(function (event) {
 
     // Obtem os dados do formulário
     const userData = {
-        name: $('#usuario').val(),
-        email: $('#senha').val()
+        nome: $('#usuario').val(),
+        senha: $('#senha').val()
     };
 
     // Faz o POST para a API
