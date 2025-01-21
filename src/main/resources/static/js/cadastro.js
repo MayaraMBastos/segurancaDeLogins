@@ -1,4 +1,3 @@
-
 import { RegisterModule } from './request.js';
 
 $(document).ready(function () {
