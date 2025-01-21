@@ -17,18 +17,26 @@ public class S_Cadastro {
 
     public void registroUsuario(M_Usuario user) {
         // Verificar se o username já existe
-        if (rUsuario.findByNome(user.getNome()).isPresent()){
+        if (rUsuario.findByNome(user.getNome()).isPresent()) {
             throw new RuntimeException("O nome de usuário já está em uso.");
         }
+        try {
+            // Validação de senha
+            Validations.validatePassword(user.getSenha());
+        } catch (RuntimeException e) {
+            // Relançar a exceção para interromper o fluxo
+            throw e;
+        }
 
-        // Criptografar a senha
-        String hashedPassword = PasswordUtils.hashPassword(user.getSenha());
-        user.setSenha(hashedPassword);
+            // Criptografar a senha
+            String hashedPassword = PasswordUtils.hashPassword(user.getSenha());
+            user.setSenha(hashedPassword);
 
-        //Validacao de caracteres minimos (8)
-        Validations.validatePassword(user.getSenha());
+            // Salvar usuário no banco
+            rUsuario.save(user);
 
-        // Salvar usuário no banco
-        rUsuario.save(user);
+
+
+
     }
 }
