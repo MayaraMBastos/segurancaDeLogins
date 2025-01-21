@@ -12,11 +12,11 @@ public class M_Usuario {
     private Long id;
 
     @Column(name = "nome")
-    @NotBlank(message = "O nome é obrigatório")
+   // @NotBlank(message = "O nome é obrigatório")
     private String nome;
 
     @Column(name = "senha")
-    @NotBlank(message = "A senha é obrigatória")
+    //@NotBlank(message = "A senha é obrigatória")
     private String senha;
 
     public Long getId() {
