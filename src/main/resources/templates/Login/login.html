@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css"/>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="module" src="/js/login.js" defer></script>
     <title>Login</title>
 </head>
 <body>
 <div class="container">
-    <form action="/" method="POST" class="formularioLogin">
+    <form action="/login" method="POST" class="formularioLogin">
         <h1>Login</h1>
 
         <label for="nome">
@@ -28,11 +27,20 @@
                     placeholder="Insira sua senha"
                     required
             /></label>
+        <label for="type">
+            <select name="type" id="type">
+                <option value="">--Tipo de login--</option>
+                <option value="password">Password</option>
+                <option value="token">token</option>
+            </select>
+        </label>
+
         <div class="row">
             <button type="submit" id="btnLogar">Entrar</button>
 
         </div>
-        <p class="row"><a href="redefinir">Não lembro usúario e senha.</a></p>
+        <p class="row"><a href="/cadastro">Cadastrar</a>
+        <p>
 
     </form>
 </div>

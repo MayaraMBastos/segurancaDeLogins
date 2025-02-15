@@ -11,4 +11,6 @@ public interface R_Usuario extends JpaRepository<M_Usuario, Long> {
 
     Optional<M_Usuario> findByNome(String nome);
 
+
+
 }
